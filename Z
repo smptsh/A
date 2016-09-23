@@ -1,0 +1,18 @@
+
+#include <iostream>
+using namespace std;
+// определение класса комплексных чисел
+class bi{
+public:
+    short year;
+    long pnum;
+    void add(bi x) {x.year=year;x.pnum=pnum;}
+};
+int main(){
+    bi x;
+    cout<<"Year?";
+    cin>>x.year;
+    cout<<"Number:?";
+    cin>>x.pnum;
+    [SIZE="4"][B][U]//как сюда вывести все данные содержащиеся в переменке x???[/U][/B][/SIZE]
+}
