@@ -1,0 +1,35 @@
+#include <iostream>
+#include <fstream>
+#include <iomanip> 
+#include <stdlib.h>
+using namespace std;
+int main()
+{
+    ifstream ouFal("INPUT.TXT",ios::in);
+    if (! ouFal)
+    {
+        cerr << "Ошибака откритие файла " << endl;
+        exit(1);
+    }
+    ofstream inFal("OUTPUT.TXT", ios::out);
+    
+    long int x = 0, i;
+ 
+    
+    while (! ouFal.eof())
+    {
+        cout << ouFal.eof() << endl;
+        ouFal >> x;
+        
+        if (x < 0 ) 
+            x = ((x * (x - 1)) / 2 ) * -1;
+        else 
+            x = (x * (x + 1)) / 2;
+ 
+    inFal << x << endl;
+    }
+    inFal.close();
+    ouFal.close();
+    
+    return 0;
+}
