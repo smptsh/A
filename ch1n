@@ -1,0 +1,16 @@
+#include <iostream>
+ 
+int main()
+{
+    int n=0;
+    std::cout<<"Enter n: ";
+    std::cin>>n;
+    int sum=0;
+    for(int i=1; i<=n; ++i)
+    {
+        if(!(i&1))
+           sum+=i;
+    }
+    std::cout<<sum<<'\n';
+    return 0;
+}
